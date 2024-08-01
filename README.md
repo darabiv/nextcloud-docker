@@ -87,19 +87,15 @@ To ensure that the containers are up and running as expected, execute the follow
 docker ps
 ```
 
-You can also list the volumes by running:
-```commandline
-docker volume ls
+## Step 8- Configure Nginx
+
+```
+cp nextcloud.conf /etc/nginx/conf.d/
 ```
 
-To inspect the volumes, run the following:
 ```commandline
-docker volume inspect nextcloud_db
-docker volume inspect nextcloud_nextcloud
+sudo systemctl restart nginx.service
 ```
-
-With the Nextcloud container running, you can access the installation page in your web browser by entering http://your_server_IP:8080 
-or using the associated domain if it has an SSL certificate (https://your_domain for HTTPS).
 
 
 ## Cheat Sheet
@@ -116,4 +112,15 @@ docker image ls
 
 ```commandline
 docker container ls -a
+```
+
+You can also list the volumes by running:
+```commandline
+docker volume ls
+```
+
+To inspect the volumes, run the following:
+```commandline
+docker volume inspect nextcloud_db
+docker volume inspect nextcloud_nextcloud
 ```
