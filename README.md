@@ -107,7 +107,7 @@ or using the associated domain if it has an SSL certificate (https://your_domain
 dcnext down
 ```
 ```commandline
-dcnext log
+dcnext logs
 ```
 
 ```commandline
