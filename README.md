@@ -1,6 +1,6 @@
 ## Step 1 - SSH into the server
 ```commandline
-ssh youusername@yourhostip
+ssh yourusername@yourhostip
 ```
 
 ## Step 2 - Install docker
@@ -47,7 +47,7 @@ docker --version
 
 ## Step 3 - Pull this repo
 ```commandline
- git@github.com:darabiv/nextcloud-docker.git
+ git clone git@github.com:darabiv/nextcloud-docker.git
 ```
 
 ## Step 4 - Change db.env
@@ -85,4 +85,35 @@ To ensure that the containers are up and running as expected, execute the follow
 
 ```commandline
 docker ps
+```
+
+You can also list the volumes by running:
+```commandline
+docker volume ls
+```
+
+To inspect the volumes, run the following:
+```commandline
+docker volume inspect nextcloud_db
+docker volume inspect nextcloud_nextcloud
+```
+
+With the Nextcloud container running, you can access the installation page in your web browser by entering http://your_server_IP:8080 
+or using the associated domain if it has an SSL certificate (https://your_domain for HTTPS).
+
+
+## Cheat Sheet
+```commandline
+dcnext down
+```
+```commandline
+dcnext log
+```
+
+```commandline
+docker image ls
+```
+
+```commandline
+docker container ls -a
 ```
